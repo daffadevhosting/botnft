@@ -41,7 +41,7 @@ const Home: NextPage = () => {
     DROP_EDITION_ADDRESS,
     "edition-drop"
   );
-  const title = "3rdweb Testnet";
+  const title = "BOTnft Testnet";
   
   const connectWithMetamask = useMetamask();
   const connectWithWalletConnect = useWalletConnect();

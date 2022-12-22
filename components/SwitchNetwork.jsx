@@ -27,7 +27,7 @@ export default function SwitchNetwork() {
     <Card bg="dark" style={{ width: '18rem' }}  className={`${styles.midCenter}`}>
       <Card.Body>
         <Card.Title><RiErrorWarningFill size={28}/> {Title}</Card.Title>
-		<Card.Text>Halaman ini berinteraksi di jaringan {networkName}.<p/>
+		<Card.Text>Website ini berinteraksi di jaringan {networkName}.<p/>
           Silahkan ganti ke jaringan {networkName}.
         </Card.Text>
     <Button onClick={() => switchNetwork(Number(process.env.NEXT_PUBLIC_CHAIN_ID))} className={`${styles.switchNet}`}>

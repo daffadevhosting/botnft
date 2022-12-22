@@ -32,7 +32,7 @@ export default function Play() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const title = "3rdweb Testnet";
+  const title = "BOTnft Testnet";
   const address = useAddress();
   const connectWithMetamask = useMetamask();
   const { contract: miningContract } = useContract(MINING_CONTRACT_ADDRESS);

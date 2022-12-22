@@ -12,7 +12,7 @@ function Navigation() {
   return (
       <Navbar className={styles.glass} sticky="top">
         <Container>
-          <Navbar.Brand href="/">{TxtTitle}</Navbar.Brand>
+          <Navbar.Brand href="/" style={{color: "#fff"}}>{TxtTitle}</Navbar.Brand>
 		  <div style={{display: "flex", alignItems: "center", gap: 10}}>
 		  <OpenSea />
 		  <UniLink />
