@@ -18,7 +18,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { DROP_EDITION_ADDRESS } from "../const/contract";
 import MintContainer from "../components/MintContainer";
 import SwitchNetwork from "../components/SwitchNetwork";
-import IframeExchange from "../components/utils/Uniswap";
 import Nav from "../components/utils/Navbar";
 import { RiExchangeFundsFill } from "react-icons/ri";
 import MiningToken from "../components/MiningPage";
