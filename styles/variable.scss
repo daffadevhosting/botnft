@@ -1,0 +1,40 @@
+$metamask: url('../public/icons/metamask.svg');
+$walletconnect: url('../public/icons/walletconnect.svg');
+$coinbase: url('../public/icons/coinbase.svg');
+$polygon: url('../public/icons/polygon.png');
+$ftm: url('../public/icons/ftm.png');
+$avatar: url('../public/avatar.png');
+
+// Mobile breakpoints
+@mixin mobile {
+  @media (min-width: 320px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font: 14px arial;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mobile_only {
+    display: none !important;
+    @include mobile{
+        display: block;
+    }
+}
+
+.desktop_only {
+    display: block;
+    @include mobile {
+        display: none !important;
+    }
+}
+

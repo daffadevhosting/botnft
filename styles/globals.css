@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+ /* min-height: 100vh; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html {
+    background-image: url(/Vector.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+@media screen and (max-width: 800px) {
+html {
+    background-size: cover;
+    background-position: center;
+    height: -webkit-fill-available;}
+}
+
+:root {
+  --background-color: #1c1e21;
+  --white: #ffffff;
+  --tw-color1: #a855f7;
+  --tw-color1-hover: #9333ea;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: rgb(0 0 0 / 0%) !important;
+  color: #fff !important;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+span {overflow: unset !important;}
+video {
+	object-fit: cover !important;height: 240px !important;}
+	
+.swal2-icon {
+    margin: 1.5em auto 0.6em !important;
+}
+.swal2-title {
+    font-size: 1.5em !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(0 0 0 / 25%); 
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
