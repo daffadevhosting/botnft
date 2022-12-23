@@ -88,7 +88,7 @@ export default function CurrentGear({
 <Card style={{ minHeight: '224.05px' }}>
     <Card.Body className={MiningAnim.sliderBox} style={{padding: '10px', textAlign: 'left', color: '#121212'}}>
 <Card.Title>Cara Mining Token{Symbol}</Card.Title>
-<span> Untuk memulai, kamu harus memiliki NFT BOT yang akan otomatis mengaktifkan fungsi mining setelah di stake.<br/>Setiap <b>NFT</b> mempunyai tingkat kecepatan mining yang berbeda. Token <b>{Symbol}</b> bisa ditukarkan ke <b>BNB</b> (binance) di <a href={swapToken()} target='_blank' rel="noreferrer"><b>PancakeSwap</b></a>.</span>
+<span> Untuk memulai, kamu harus memiliki NFT BOT yang akan otomatis mengaktifkan fungsi mining setelah di stake.<br/>Setiap <b>NFT</b> mempunyai tingkat kecepatan mining yang berbeda. Token <b>{Symbol}</b> bisa dibeli atau ditukarkan ke <b>BNB</b> (binance) di <a href={swapToken()} target='_blank' rel="noreferrer"><b>PancakeSwap</b></a>.</span>
     </Card.Body>
 </Card>
 </>

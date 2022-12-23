@@ -49,7 +49,7 @@ export default function OwnedNft({ initialContract, miningContract }: Props) {
   if (ownedInitials?.length === 0  || undefined) {
     return <Alert variant="danger" className="mt-4">
         <Alert.Heading>Oh snap! tidak ada NFT..</Alert.Heading>
-        <p>Untuk memulai atau mengupgrade kecepatan mining, kamu harus punya NFT.</p>
+        <p>Untuk memulai atau mengupgrade kecepatan mining, kamu harus memiliki NFT.</p>
       </Alert>;
   }
 
