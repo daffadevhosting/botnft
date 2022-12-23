@@ -17,6 +17,7 @@ import Rewards from "../components/Rewards";
 import Shop from "../components/Shop";
 import Navigation from "../components/utils/Navbar";
 import SwapLink from '../components/utils/LinkSwap';
+import OpenseaShop from '../components/utils/BtnOpensea';
 import { BsShopWindow } from "react-icons/bs";
 import {
   DROP_EDITION_ADDRESS,
@@ -118,7 +119,8 @@ export default function Play() {
       )}
         </Offcanvas.Body>
       </Offcanvas>
-<Button variant="primary" onClick={handleShow} className="me-2" style={{position: 'fixed', bottom: 20, right: 20, width: '54px', height: '54px'}}><BsShopWindow size={'28px'}/></Button>
+<Button variant="primary" onClick={handleShow} className="me-2" style={{position: 'fixed', bottom: 20, right: 20, width: '54px', height: '54px', borderRadius: '50%'}} title="NFT shop"><BsShopWindow size={'28px'}/></Button>
+<OpenseaShop />
     </Container>
 </>
   );

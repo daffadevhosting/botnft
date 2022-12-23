@@ -107,6 +107,27 @@ export const openseaUrl = () => {
   }
 }
 
+export const shopUrl = () => {
+  const shop = process.env.NEXT_PUBLIC_CONTRACT_SHOP
+
+  switch (process.env.NEXT_PUBLIC_CHAIN_ID) {
+    case '137':
+      // Mainnet
+      return `https://opensea.io/collection/${shop}`
+    case '80001':
+      // Mumbai
+      return `https://testnets.opensea.io/collection/${shop}`
+    case '56':
+      // Mainnet
+      return `https://opensea.io/collection/${shop}`
+    case '97':
+      // tBNB
+      return `https://testnets.opensea.io/collection/${shop}`
+    default:
+      return ``
+  }
+}
+
 export const cmcUrl = () => {
   return `https://coinmarketcap.com/id/currencies/${process.env.NEXT_PUBLIC_TOKEN_SYMBOL}`
 }
@@ -126,6 +147,7 @@ export const discordUrl = () => {
 export const snsLinks = {
   explorerUrl,
   openseaUrl,
+  shopUrl,
   twitterUrl,
   instagramUrl,
   discordUrl,
