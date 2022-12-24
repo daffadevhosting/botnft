@@ -68,7 +68,7 @@ export default function NftItem({ item, initialContract }: Props) {
               text: 'Pembelian Mining Card Gagal..',
               icon: 'error',
               confirmButtonText: 'Blah',
-			  footer: '<a href="https://pancakeswap.finance/swap?inputCurrency=0xc1727Cc93dF43060A95234fF2510A526f05df9C5&exactField=output&exactAmount=10&outputCurrency=tBNB&chainId=97" target="_blank">Beli token BOT di PANCAKESWAP?</a>'
+			  footer: '<a href="https://pancakeswap.finance/swap?inputCurrency=tBNB&exactField=output&exactAmount=5&outputCurrency=0xc1727Cc93dF43060A95234fF2510A526f05df9C5&chainId=97" target="_blank">Beli token BOT di PANCAKESWAP?</a>'
               });
           }
 		 }

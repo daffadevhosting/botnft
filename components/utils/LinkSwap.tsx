@@ -9,7 +9,7 @@ import { swapUrl } from "../../const/aLinks";
 export default function LinkSwap() {
 
   return (
-  <Link href={swapUrl()} passHref><a target="_blank" rel="noopener noreferrer" title="PancakeSwap" style={{height: 25}}>
+  <Link href={swapUrl()} passHref><a target="_blank" rel="noopener noreferrer" title="buy token" style={{height: 25}}>
   <Image src={Logo} width={200} height={35} alt="logo" />
   </a></Link>
   
