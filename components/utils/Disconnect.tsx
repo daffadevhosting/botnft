@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import {
-  useTokenBalance,
-  useContractRead,
-  useMetadata,
   useAddress,
   useDisconnect,
   useMetamask, useWalletConnect, useCoinbaseWallet,
 } from "@thirdweb-dev/react";
-import { SmartContract, Token } from "@thirdweb-dev/sdk";
-import { ethers } from "ethers";
 import { MINING_CONTRACT_ADDRESS, INITIAL_TOKEN_SYMBOL } from "../../const/contract";
 import { RiLogoutCircleRLine, RiLoginCircleLine, RiWallet3Line } from "react-icons/ri";
 import Badge from 'react-bootstrap/Badge';
@@ -17,16 +12,9 @@ import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import styles from "../../styles/Home.module.scss";
 
-type Props = {
-  miningContract: SmartContract<any>;
-  tokenContract: Token;
-};
-
-export default function Disconnect({ miningContract, tokenContract }: Props) {
-  const Symbol = INITIAL_TOKEN_SYMBOL;
-  const { data: tokenMetadata } = useMetadata(tokenContract);
-  const { data: currentBalance } = useTokenBalance(tokenContract, address);
-
+export default function Disconnect() {
+  const address = useAddress();
+  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -36,7 +24,6 @@ export default function Disconnect({ miningContract, tokenContract }: Props) {
   const connectWithMetamask = useMetamask();
   const connectWithWalletConnect = useWalletConnect();
   const connectWithCoinbaseWallet = useCoinbaseWallet();
-  const address = useAddress();
   const disconnectWallet = useDisconnect();
 
   return (
@@ -49,19 +36,12 @@ export default function Disconnect({ miningContract, tokenContract }: Props) {
         </Button>
     <Modal show={show} onHide={handleClose} animation={true} backdrop="static" centered>
         <Modal.Header closeButton>
-          <Modal.Title style={{color: "#000000"}}>Sign Out Wallet</Modal.Title>
+          <Modal.Title style={{color: "#000000"}}>Sign Out</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-                    <p style={{marginBottom: 20, color: '#000'}}>Your Wallet Address<br/>{address}</p>
-{tokenMetadata && (
-<>
-      <p style={{marginBottom: 20, color: '#000'}}>
-        Saldo Dompet: <b>{currentBalance?.displayValue} <small>{Symbol}</small></b>
-      </p>
-</>
-      )}
+                    <p style={{marginBottom: 20, color: '#000'}}>Alamat Dompet Kamu<br/>{address}</p>
         <Button className={styles.btn_log} onClick={() => disconnectWallet()} variant='danger' style={{maxHeight: 30, float: 'right'}} title="Sign Out">
-                    <p className={styles.desktop_only} style={{margin: 0}}>Sign Out</p>
+                    <p className={styles.desktop_only} style={{margin: 0}}>Disconnect</p>
         <RiLogoutCircleRLine size='24' />
         </Button>
     </Modal.Body>
